@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link rel="stylesheet" href="https://use.typekit.net/vmq0vek.css"/>
+        <link rel="stylesheet" href="https://use.typekit.net/vmq0vek.css"></link>
       </Head>
       <main>
         <div>
