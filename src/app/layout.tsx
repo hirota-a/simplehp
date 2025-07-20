@@ -10,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body className="bg-gray-50 text-gray-800 font-sans">
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/vmq0vek.css"/>
+      </head>
+      <body className="bg-gray-50 text-gray-800">
         <nav className="bg-white border-b border-gray-200 px-6 py-4 shadow">
           <ul className="flex space-x-4">
             <li><Link href="/" className="text-blue-600 hover:underline">HOME</Link></li>
