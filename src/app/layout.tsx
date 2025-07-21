@@ -1,6 +1,13 @@
-
 import "./globals.css";
 import Link from 'next/link'
+import { Rock_Salt } from 'next/font/google'
+
+const rockSalt = Rock_Salt({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-rock-salt', // Tailwind CSS で使えるように変数化
+})
 
 export const metadata = {
   title: 'My homepage',
@@ -9,16 +16,13 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja">
-      <head>
-        <link rel="stylesheet" href="https://use.typekit.net/vmq0vek.css"/>
-      </head>
-      <body className="bg-gray-50 text-gray-800 font-adobe-handwriting">
+    <html lang="ja" className={rockSalt.variable}> 
+      <body className="bg-gray-50 text-gray-800">
         <nav className="bg-white border-b border-gray-200 px-6 py-4 shadow">
           <ul className="flex space-x-4">
             <li><Link href="/" className="text-blue-600 hover:underline">HOME</Link></li>
-            <li><Link href="/works" className="text-blue-600 hover:underline">Works</Link></li>
-            <li><Link href="/contact" className="text-blue-600 hover:underline">Contact</Link></li>
+            <li><Link href="/works" className="text-blue-600 hover:underline">WORKS</Link></li>
+            <li><Link href="/contact" className="text-blue-600 hover:underline">CONTACT</Link></li>
           </ul>
         </nav>
         <main className="max-w-3xl mx-auto px-4 py-8">
@@ -26,5 +30,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
       </body>
     </html>
-  )
+  );
 }

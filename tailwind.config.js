@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'adobe-handwriting': ['"adobe-handwriting-ernie"', 'cursive'],
+        rocksalt: ['var(--font-rock-salt)'], // カスタムフォント
       },
     },
   },
