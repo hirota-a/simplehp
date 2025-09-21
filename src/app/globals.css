@@ -1,4 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Rock+Salt&display=swap');
 @import "tailwindcss";
+
+
+@theme {
+  --font-rocksolt: 'Rock Salt', cursive;
+  --font-notosans: 'Noto Sans JP', sans-serif;
+}
 
 :root {
   --background: #ffffff;

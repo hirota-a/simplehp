@@ -1,6 +1,8 @@
 
+
 import "./globals.css";
-import Link from 'next/link'
+import Header from "./Header";
+
 
 export const metadata = {
   title: 'My homepage',
@@ -8,20 +10,20 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+
+
   return (
     <html lang="ja">
-      <body className="bg-gray-50 text-gray-800 font-sans">
-        <nav className="bg-white border-b border-gray-200 px-6 py-4 shadow">
-          <ul className="flex space-x-4">
-            <li><Link href="/" className="text-blue-600 hover:underline">HOME</Link></li>
-            <li><Link href="/works" className="text-blue-600 hover:underline">Works</Link></li>
-            <li><Link href="/contact" className="text-blue-600 hover:underline">Contact</Link></li>
-          </ul>
-        </nav>
-        <main className="max-w-3xl mx-auto px-4 py-8">
+      <body className="bg-yellow-50 font-sans min-h-dvh flex flex-col">
+        <Header />
+        <main className="w-full px-4 sm:px-6 md:px-10 lg:px-20 bg-yellow-50 flex-1">
           {children}
         </main>
+        <footer className="w-full px-4 sm:px-6 md:px-10 lg:px-20 text-sm sticky top-full bg-yellow-50 flex py-4 border-t border-gray-200">
+          <p className="text-sm md:base lg:text-xl text-gray-600">© 2025 HIROTA. </p>
+        </footer>
       </body>
     </html>
   )
 }
+
