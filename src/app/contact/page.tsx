@@ -1,6 +1,7 @@
 //https://zenn.dev/c_ryoya/articles/e302715252dc9e#%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AE%E4%BD%9C%E6%88%90
 //https://sendgrid.kke.co.jp/blog/?p=14220&utm_source=google&utm_medium=cpc&utm_content=text&utm_campaign=dsa&gclid=CjwKCAiAu5agBhBzEiwAdiR5tLYhQ9B3UevVd8r7S2rJxBgeQGBN8I7_r9xQE1yE6b-LuPWhyKGiQxoCSDQQAvD_BwE
 
+'use client';
 
 import React from "react";
 
@@ -52,15 +53,15 @@ export default function Contact() {
         <form onSubmit={registerUser} className="space-y-4">
           <div>
             <label htmlFor="name" className="font-notsans block text-sm font-medium ">お名前<span className="text-red-600">* </span></label>
-            <input type="text" id="name" name="name" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500" required />
+            <input type="text" id="name" name="name" className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500" required />
           </div>
           <div>
             <label htmlFor="email" className="font-notsans block text-sm font-medium text-gray-700">メールアドレス<span className="text-red-600">* </span></label>
-            <input type="email" id="email" name="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500" required />
+            <input type="email" id="email" name="email" className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500" required />
           </div>
           <div>
             <label htmlFor="message" className="font-notsans block text-sm font-medium text-gray-700">お問い合わせ内容<span className="text-red-600">* </span></label>
-            <textarea id="message" name="message" rows={4} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500" required></textarea>
+            <textarea id="message" name="message" rows={4} className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500" required></textarea>
           </div>
           <div className="text-center">
             <button type="submit" className="font-notsans w-full py-2 bg-cyan-500 text-white rounded-md hover:bg-cyan-700">送信</button>
